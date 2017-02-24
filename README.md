@@ -16,8 +16,14 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 3. Clone this repository into the webroot. **This may override some files**. `git clone URL`
 4. Download all submodules `git submodule update --init --recursive`
 
+### Updates
+1. `git pull origin master`
+2. `git submodule foreach git pull origin master`
+3. https://documentation.concrete5.org/developers/installation/upgrading-concrete5
+4. https://www.codeigniter.com/userguide3/installation/upgrade_301.html
 
-## Apache VHost
+
+### Apache VHost
 ```apache
 <VirtualHost *:80>
    ServerAdmin webmaster.cant-col.ac.uk
@@ -67,7 +73,7 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 
 ```
 
-## LetsEncrypt Certificate
+### LetsEncrypt Certificate
 We recommend securing your site with a LetsEncrypt certificate.
 
 ```bash
