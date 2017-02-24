@@ -1,0 +1,69 @@
+@import url('/application/themes/ccintranet/assets/css/style.css');
+
+/* EKC Override STYLE */
+
+::-webkit-scrollbar-thumb {
+    background-color: #00a399;
+}
+
+a:hover { color: #00a399; }
+
+.navbar {
+    background: #652D86 !important;
+}
+
+.sidebar ul li a.active {
+    color: #00a399;
+}
+.sidebar ul li a.active:hover {
+    color: #00a399;
+}
+.sidebar button.search-site:hover {
+    color: #00a399;
+}
+.sidebar .fa-arrow-left {
+    color: #00a399;
+}
+
+.breadcrumb {
+    color: #00a399;
+}
+.breadcrumb .fa {
+    color: #00a399;
+}
+
+h1.page-header {
+    color: #00a399;
+}
+
+.row.dept-items h2, .row.dept-items i {
+    color: #00a399;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type="search"]:focus, input[type="url"]:focus,
+input[type="password"]:focus, textarea:focus, input[type=submit]:focus, button:focus, select
+.ui-autocomplete-input:focus, .uneditable-input:focus {
+    border: 1px solid #00a399;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
+.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background: #00a399;
+}
+
+a.cc_btn.cc_btn_accept_all {
+    background: #00a399 !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background-color: #c2324b;
+}
+.ui-datepicker td .ui-state-hover {
+    background: #c2324b;
+    background-color: #c2324b;
+}
+
+.jstree-default .jstree-clicked {
+    background: #00a399 !important;
+    color: #fff !important;
+}

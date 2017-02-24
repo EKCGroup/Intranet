@@ -1,0 +1,71 @@
+@import url("/application/themes/ccintranet/assets/css/main.css");
+
+/* ----------- StyleSheet Overrides ----------- */
+
+/* Pace */
+#ccm-toolbar {
+    filter: blur(5px);
+    -webkit-filter: blur(5px); 
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px); 
+    -ms-filter: blur(5px);
+}
+/* END Pace */
+
+/* ----------- END StyleSheet Overrides ----------- */
+
+/* C5 CORE OVERRIDES */
+
+li.ccm-logo.pull-left { /* Remove C5 Logo from Edit Bar */
+    visibility: hidden !important;
+    width: 0px !important;
+}
+div#ccm-toolbar {
+    border-bottom: none !important; /* Style for Edit Bar */
+}
+li.ccm-toolbar-search.pull-right.hidden-xs {
+    visibility: hidden !important; /* Hide Search on Edit Bar */
+}
+body.ccm-loading *, body.ccm-loading {
+    cursor: inherit !important; /* Prevents default progress cursor */
+}
+.ccm-notification { /* Hides Page Version Popup */
+    visibility: hidden;
+    width: 0px;
+}
+.ccm-edit-mode-disabled-item { /* Hides attached file background */
+    background: #FFF !important;
+}
+
+/* Block Style Overrides */
+
+.related-file-block a:hover { color: #C2324B; }
+
+/* END C5 CORE OVERRIDES */
+
+/* C5 Disable */
+
+div#ccm-panel-add-block div.ccm-panel-add-block-set ul li {
+    margin: 0;
+}
+li > a[data-block-type-handle="horizontal_rule"],
+li > a[data-block-type-handle="feature"],
+li > a[data-block-type-handle="page_title"],
+li > a[data-block-type-handle="faq"],
+li > a[data-block-type-handle="next_previous"],
+li > a[data-block-type-handle="date_navigation"],
+li > a[data-block-type-handle="tags"],
+li > a[data-block-type-handle="topic_list"],
+li > a[data-block-type-handle="rss_displayer"],
+li > a[data-block-type-handle="switch_language"],
+li > a[data-block-type-handle="external_form"],
+li > a[data-block-type-handle="social_links"],
+li > a[data-block-type-handle="testimonial"],
+li > a[data-block-type-handle="share_this_page"],
+li > a[data-block-type-handle="page_attribute_display"],
+li > a[data-block-type-handle="image_slider"],
+li > a[data-block-type-handle="google_map"] {
+    display: none;
+}
+
+/* END C5 Disable */

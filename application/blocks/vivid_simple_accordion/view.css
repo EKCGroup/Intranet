@@ -1,0 +1,8 @@
+.vivid-simple-accordion { margin-bottom: 1.2em; }
+    .simple-accordion-group { margin-bottom: 1em; }
+        .simple-accordion-title-shell { overflow: auto; background: #eee; padding: 3px 15px; cursor: pointer; }
+            .simple-accordion-title-shell > * { margin: 0; }
+            .simple-accordion-group.closed .simple-accordion-title-shell > *:before { font-family: "FontAwesome"; content: "\f0da"; margin-right: 8px; }
+            .simple-accordion-group.open .simple-accordion-title-shell > *:before { font-family: "FontAwesome"; content: "\f0d7"; margin-right: 8px; }            
+        .simple-accordion-group .simple-accordion-description { padding: 20px; background: #fff; display: none; border: 1px solid rgba(229, 229, 229, 0.40); }
+        .simple-accordion-group.open .simple-accordion-description { display: block; }
