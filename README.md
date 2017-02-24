@@ -4,6 +4,11 @@
 CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a single bootstrap theme across both platforms; combined makes a elegant Intranet solution, rich with functionality and the ability for users to maintain their own content.
 
 ##### This is the theme only!
+## Screenshots
+### Desktop
+![](https://github.com/East-Kent-Partnership/Intranet/blob/master/screenshots/HomePage.png)
+### Mobile
+![](https://github.com/East-Kent-Partnership/Intranet/blob/master/screenshots/HomeMobile.png)
 
 ## Installation
 1. Download and install the latest version of Concrete5 from `https://www.concrete5.org/` in your servers webroot.
@@ -14,3 +19,8 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 ## Apache VHost
 
 ## LetsEncrypt Certificate
+We recommend securing your site with a LetsEncrypt certificate.
+
+```bash
+apt install -y certbot
+letsencrypt certonly --webroot -w /var/www/html/certificate.cant-col.ac.uk -d .cant-col.ac.uk ```
