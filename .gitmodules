@@ -1,0 +1,3 @@
+[submodule "application/elements/ResponsiveLoginDesign"]
+	path = application/elements/ResponsiveLoginDesign
+	url = https://github.com/East-Kent-Partnership/ResponsiveLoginDesign
