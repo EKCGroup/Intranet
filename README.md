@@ -13,7 +13,8 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 ## Installation
 1. Download and install the latest version of Concrete5 from `https://www.concrete5.org/` in your servers webroot.
 2. Download and configure the latest version of Codeigniter from `https://www.codeigniter.com/' in `WEBROOT/dashboard`
-3. Clone or unzip this repository into the webroot. **This may override some files**.
+3. Clone this repository into the webroot. **This may override some files**. `git clone URL`
+4. Download all submodules `git submodule update --init --recursive`
 
 
 ## Apache VHost
