@@ -40,8 +40,11 @@ $config['timezone'] = 'Europe/London';
 
 ### Updates
 Note* git commands will override files which have been edited since your last pull request.
+
 1. `git pull origin master`
+
 2. `git submodule foreach git pull origin master`
+
 3. https://documentation.concrete5.org/developers/installation/upgrading-concrete5
 4. https://www.codeigniter.com/userguide3/installation/upgrade_301.html
 
