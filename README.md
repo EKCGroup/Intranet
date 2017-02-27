@@ -12,10 +12,15 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 
 ## Installation
 1.. Download and install the latest version of Concrete5 from `https://www.concrete5.org/` in your servers webroot.
+
 2.. Download and configure the latest version of Codeigniter from `https://www.codeigniter.com/' in `WEBROOT/dashboard`
+
 3.. In `dashboard/application/config/config.php` set '$config['index_page'] = '';' and `$config['base_url'] = 'https://DOMAIN.COM/dashboard';`
+
 4.. Clone this repository into the webroot. **This may override some files**. `git clone URL`
+
 5.. Download all submodules `git submodule update --init --recursive`
+
 6.. Add the following to `dashboard/application/config/config.php`
 ```php
 $config['ldapserver'] = 'ldap://'.$config['ldapip'];
@@ -38,6 +43,7 @@ $config['privateip'] = '10.0.0.0|10.255.255.255';
 $config['timezone'] = 'Europe/London';
 ```
 7.. Import the dashboard config `dashboard/import.sql`
+
 8.. Copy the database config and change the variable to `intranet` and add the concrete5 database settings `dashboard/application/config/database.php`
 ```php
 $db['intranet'] = array(
