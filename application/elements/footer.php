@@ -40,8 +40,8 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.6.2/metisMenu.min.js"></script>
-    <script type="text/javascript" src="/application/themes/ccintranet/assets/vendor/sorttable-2.0.0/sorttable.min.js"></script>
-    <script type="text/javascript" src="/application/themes/ccintranet/assets/js/main.js"></script>
+    <script type="text/javascript" src="/application/elements/theme/global/vendor/sorttable-2.0.0/sorttable.min.js"></script>
+    <script type="text/javascript" src="/application/elements/theme/global/js/main.js"></script>
     
 </body>
 </html>

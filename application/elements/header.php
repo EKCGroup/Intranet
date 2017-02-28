@@ -50,7 +50,7 @@
         <title>Intranet - Canterbury College</title>
 
         <link type="text/css" rel="stylesheet" href="/concrete/css/jquery-ui.css">
-        <link type="text/css" rel="stylesheet" href="/application/themes/ccintranet/assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="/application/themes/ccintranet/assets/css/style.css">
         
     <?php /* END Codeigniter */ } else {  /* IF Concrete5 */ ?>
     

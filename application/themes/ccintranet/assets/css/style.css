@@ -1,4 +1,4 @@
-@import url("/application/themes/ccintranet/assets/css/main.css");
+@import url("/application/elements/theme/global/css/main.css");
 
 /* ----------- StyleSheet Overrides ----------- */
 
@@ -35,6 +35,10 @@ body.ccm-loading *, body.ccm-loading {
 }
 .ccm-edit-mode-disabled-item { /* Hides attached file background */
     background: #FFF !important;
+}
+
+.ccm-inline-toolbar {
+    opacity: 1;
 }
 
 /* Block Style Overrides */

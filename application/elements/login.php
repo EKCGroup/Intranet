@@ -3,9 +3,9 @@
 <html>
     <head>
         <title>Intranet - Canterbury College</title>
-        <link rel="stylesheet" type="text/css" href="/application/themes/ccintranet/assets/css/minify-login-style.css" /> <!-- Desktop and Mobile Style (Minus Responsive Footer) -->
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 651px)" href="/application/themes/ccintranet/assets/css/minify-login-style-dfooter.css" /> <!-- Desktop Style -->
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="/application/themes/ccintranet/assets/css/minify-login-style-mfooter.css" /> <!-- Mobile Style -->
+        <link rel="stylesheet" type="text/css" href="/application/elements/theme/global/ResponsiveLoginDesign/css/style.css" /> <!-- Desktop and Mobile Style (Minus Responsive Footer) -->
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 651px)" href="/application/elements/theme/global/ResponsiveLoginDesign/css/style-dfooter.css" /> <!-- Desktop Style -->
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="/application/elements/theme/global/ResponsiveLoginDesign/css/style-mfooter.css" /> <!-- Mobile Style -->
         <meta name="keywords" content="Canterbury, College, Cantebury College, Login, Office 365, VLE, e-Tracker, Learning Curve, Intranet, BKSB">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <meta name="description" content="Welcome to the Canterbury College.">
