@@ -17,11 +17,17 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 
 3.. In `dashboard/application/config/config.php` set '$config['index_page'] = '';' and `$config['base_url'] = 'https://DOMAIN.COM/dashboard';`
 
-4.. Clone this repository into the webroot. **This may override some files**. `git clone URL`
+4.. Clone this repository into the webroot. **This may override some files**. 
+```bash
+cd /WEBROOT
+git init
+git remote add origin URL
+git fetch
+git pull origin master
+git submodule update --init --recursive
+```
 
-5.. Download all submodules `git submodule update --init --recursive`
-
-6.. Add the following to `dashboard/application/config/config.php`
+5.. Add the following to `dashboard/application/config/config.php`
 ```php
 $config['ldapserver'] = 'ldap://'.$config['ldapip'];
 $config['ldapip'] = '';
@@ -42,9 +48,9 @@ $config['ldapadminpass'] = '';
 $config['privateip'] = '10.0.0.0|10.255.255.255';
 $config['timezone'] = 'Europe/London';
 ```
-7.. Import the dashboard config `dashboard/import.sql`
+6.. Import the dashboard config `dashboard/import.sql`
 
-8.. Copy the database config and change the variable to `intranet` and add the concrete5 database settings `dashboard/application/config/database.php`
+7.. Copy the database config and change the variable to `intranet` and add the concrete5 database settings `dashboard/application/config/database.php`
 ```php
 $db['intranet'] = array(
 ```
