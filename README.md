@@ -123,3 +123,10 @@ We recommend securing your site with a LetsEncrypt certificate.
 apt install -y certbot
 letsencrypt certonly --webroot -w /var/www/html/certificate.cant-col.ac.uk -d .cant-col.ac.uk
 ```
+
+### Auto Pull from master
+If you fork this repository, you can add the following to cron to pull all updates from master.
+```bash
+*/1 * * * * su -s /bin/sh nobody -c 'cd /var/www/html/intranet && /usr/local/bin/git -q pull origin master'
+*/1 * * * * su -s /bin/sh nobody -c 'cd /var/www/html/intranet && /usr/local/bin/git -q submodule foreach git pull origin master'
+```
