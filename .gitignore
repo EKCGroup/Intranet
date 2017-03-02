@@ -11,6 +11,7 @@ composer.lock
 index.php
 LICENSE.TXT
 robots.txt
+sitemap.xml
 
 dashboard/application/cache/*
 dashboard/application/config/*
