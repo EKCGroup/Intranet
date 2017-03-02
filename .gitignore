@@ -28,9 +28,9 @@ dashboard/application/views/index.html
 dashboard/application/index.html
 dashboard/system/*
 dashboard/user_guides/*
-.editorconfig
-composer.json
-contributing.md
-index.php
-license.txt
-readme.rst
+dashboard/.editorconfig
+dashboard/composer.json
+dashboard/contributing.md
+dashboard/index.php
+dashboard/license.txt
+dashboard/readme.rst
