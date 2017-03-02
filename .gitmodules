@@ -1,3 +1,3 @@
-[submodule "application/elements/ResponsiveLoginDesign"]
-	path = application/elements/ResponsiveLoginDesign
+[submodule "application/elements/theme/global/ResponsiveLoginDesign"]
+	path = application/elements/theme/global/ResponsiveLoginDesign
 	url = https://github.com/East-Kent-Partnership/ResponsiveLoginDesign
