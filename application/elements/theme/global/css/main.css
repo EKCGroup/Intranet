@@ -299,6 +299,7 @@ h1.page-header {
 .toolbar li#back, .toolbar li#home {
     padding-left: 1.2em;
     padding-right: 1.2em;
+    border-right: 1px solid #e5e5e5;
 }
 .toolbar ul li a { 
     text-align: center;

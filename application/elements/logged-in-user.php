@@ -5,7 +5,7 @@ function ip_is_private() {
         '194.82.168.3', //Canterbury
         '194.82.171.2', //Sheppey
         '195.194.248.2', //Broadstairs
-        '', //Dover
+        '212.219.171.98', //Dover
         '195.194.250.2', //Folkstone
     );
 
