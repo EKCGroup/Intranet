@@ -12,7 +12,7 @@
         <?php if (isset($is_codeigniter)) { ?>
         
             <a class="navbar-brand" href="/cc"><div class="intranetSprite" id="spriteCollegeLogo"  alt="Canterbury College Logo"></div></a>
-            <!-- <a class="navbar-brand" href="/ekc"><div class="intranetSprite" id="spriteEKCLogo"  alt="East Kent College Logo"></div></a> -->
+            <a class="navbar-brand" href="/ekc"><div class="intranetSprite" id="spriteEKCLogo"  alt="East Kent College Logo"></div></a>
         
         <?php /* END Codeigniter */ } else { /* IF Concrete5 */ ?>
         
@@ -20,7 +20,7 @@
                 $v = View::getInstance();
                 if ($v->getThemeHandle() == 'ccintranet') { ?>
                     <a class="navbar-brand" href="/cc"><div class="intranetSprite" id="spriteCollegeLogo"  alt="Canterbury College Logo"></div></a>
-                    <!-- <a class="navbar-brand" href="/ekc"><div class="intranetSprite" id="spriteEKCLogo"  alt="East Kent College Logo"></div></a> -->
+                    <a class="navbar-brand" href="/ekc"><div class="intranetSprite" id="spriteEKCLogo"  alt="East Kent College Logo"></div></a>
             <?php } elseif ($v->getThemeHandle() == 'ekcintranet') { ?>
                     <a class="navbar-brand" href="/ekc"><div class="intranetSprite" id="spriteEKCLogo"  alt="East Kent College Logo"></div></a>
                     <a class="navbar-brand" href="/cc"><div class="intranetSprite" id="spriteCollegeLogo"  alt="Canterbury College Logo"></div></a>
