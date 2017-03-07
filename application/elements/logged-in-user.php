@@ -1,22 +1,19 @@
 <?php
 
 function ip_is_private() {
-    $pri_addrs = array(
-        '10.0.0.0|10.255.255.255',
+    $safe_ip = array(
+        '194.82.168.3', //Canterbury
+        '194.82.171.2', //Sheppey
+        '195.194.248.2', //Broadstairs
+        '', //Dover
+        '195.194.250.2', //Folkstone
     );
 
-    $long_ip = ip2long($_SERVER['REMOTE_ADDR']);
-    if ($long_ip != -1) {
-        foreach ($pri_addrs AS $pri_addr) {
-            list ($start, $end) = explode('|', $pri_addr);
-
-            // IF IS PRIVATE
-            if ($long_ip >= ip2long($start) && $long_ip <= ip2long($end)) {
-                return true;
-            }
-        }
+    if (in_array($_SERVER['REMOTE_ADDR'], $safe_ip)) {
+        return true;
+    } else {
+        return false;
     }
-    return false;
 }
 
 $u = new User();
