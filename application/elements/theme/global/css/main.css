@@ -247,7 +247,7 @@ body {
 
 #wrapper {
     height: 100%;
-    filter: blur(5px);
+    /*filter: blur(5px);*/
 }
 #page-wrapper {
     padding: 0 0.5em;
