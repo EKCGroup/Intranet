@@ -5,18 +5,18 @@ $(function () {
 
 $(function() {
     // Pace page load progress - on complete
-    Pace.on("done", function(){
+    //Pace.on("done", function(){
         //un-blur #wrapper
-        $({blurRadius: 5}).animate({blurRadius: 0}, {
-            duration: 220,
-            easing: 'swing',
-            step: function() {
-                $('#wrapper, #ccm-toolbar').css({
-                    "-webkit-filter": "blur("+this.blurRadius+"px)",
-                    "filter": "blur("+this.blurRadius+"px)"
-                });
-            }
-        });
+        //$({blurRadius: 5}).animate({blurRadius: 0}, {
+        //   duration: 220,
+        //    easing: 'swing',
+        //    step: function() {
+        //        $('#wrapper, #ccm-toolbar').css({
+        //           "-webkit-filter": "blur("+this.blurRadius+"px)",
+        //            "filter": "blur("+this.blurRadius+"px)"
+        //        });
+        //    }
+        //});
     });
 
     // loads the correct sidebar on window load,
