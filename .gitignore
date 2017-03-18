@@ -24,6 +24,7 @@ dashboard/application/libraries/index.html
 dashboard/application/libraries/Grocery_CRUD.php
 dashboard/application/logs/*
 dashboard/application/models/index.html
+dashboard/application/models/Grocery_crud_model.php
 dashboard/application/third_party/index.html
 dashboard/application/views/index.html
 dashboard/application/index.html
