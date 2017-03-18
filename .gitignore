@@ -21,11 +21,14 @@ dashboard/application/helpers/index.html
 dashboard/application/hooks/index.html
 dashboard/application/language/*
 dashboard/application/libraries/index.html
+dashboard/application/libraries/Grocery_CRUD.php
 dashboard/application/logs/*
 dashboard/application/models/index.html
 dashboard/application/third_party/index.html
 dashboard/application/views/index.html
 dashboard/application/index.html
+dashboard/assets/grocery_crud/*
+!/dashboard/assets/grocery_crud/themes/dashboard/*
 dashboard/system/*
 dashboard/user_guides/*
 dashboard/.editorconfig
