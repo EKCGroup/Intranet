@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); 
 
-$ci_content = '
-    
+include('/var/www/html/intranet/application/elements/theme/global/ResponsiveLoginDesign/layout/header.php'); ?>
+
     <h2>Job Run.</h2>
     <p>This job has been run.</p><br>
     <p onclick="goBack()">Go Back</p>
@@ -9,9 +9,4 @@ $ci_content = '
             function goBack() { window.history.back(); }
         </script>
         
-';
-
-$is_codeigniter = 1;
-include('/var/www/html/intranet/application/elements/login.php');
-
-?>
+<?php include('/var/www/html/intranet/application/elements/theme/global/ResponsiveLoginDesign/layout/footer.php');

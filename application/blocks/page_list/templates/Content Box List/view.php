@@ -144,4 +144,4 @@ $dh = Core::make('helper/date'); /* @var $dh \Concrete\Core\Localization\Service
         <?php echo $pagination; ?>
     <?php endif; ?>
 
-<?php } ?>
+<?php }

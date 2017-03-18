@@ -108,6 +108,3 @@
                 if (isset($is_codeigniter)) {
                     $this->load->view('templates/notification');
                 }
-            ?>
-
-

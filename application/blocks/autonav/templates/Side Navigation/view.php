@@ -21,4 +21,4 @@ if (count($navItems) > 0) { ?>
             echo str_repeat('</ul>', $ni->subDepth);
         }
     } 
-} ?>
+}

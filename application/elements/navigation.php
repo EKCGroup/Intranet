@@ -186,5 +186,5 @@
         ?>
     </div> <!-- END global-notification -->
         
-<?php /* END Concrete5*/ } ?>
+<?php /* END Concrete5*/ }
  

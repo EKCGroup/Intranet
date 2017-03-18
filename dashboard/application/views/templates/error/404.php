@@ -9,4 +9,4 @@ include('/var/www/html/intranet/application/elements/theme/global/ResponsiveLogi
             function goBack() { window.history.back(); }
         </script>
         
-<?php include('/var/www/html/intranet/application/elements/theme/global/ResponsiveLoginDesign/layout/footer.php'); ?>
+<?php include('/var/www/html/intranet/application/elements/theme/global/ResponsiveLoginDesign/layout/footer.php');

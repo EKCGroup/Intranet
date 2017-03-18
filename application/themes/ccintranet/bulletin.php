@@ -56,4 +56,4 @@
             </div> <!-- END col-md-12 -->
         </div> <!-- END row -->
     </div> <!-- END container-fluid -->
-<?php Loader::element('footer'); ?>
+<?php Loader::element('footer');

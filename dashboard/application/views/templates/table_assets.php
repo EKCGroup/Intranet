@@ -5,4 +5,4 @@
 <?php endforeach; ?>
 <?php foreach($js_files as $file): ?>
     <script src="<?= $file; ?>"></script>
-<?php endforeach; ?>
+<?php endforeach;

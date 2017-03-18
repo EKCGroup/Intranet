@@ -2,5 +2,3 @@
 
 $is_codeigniter = 1;
 include('/var/www/html/intranet/application/elements/footer.php');
-
-?>

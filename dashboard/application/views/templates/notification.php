@@ -31,6 +31,4 @@
             }
              ?>                          
     <?php endforeach; 
-          echo "</div>"; }?>
-
-
+          echo "</div>"; }

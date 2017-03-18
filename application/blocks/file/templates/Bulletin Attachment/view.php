@@ -12,4 +12,4 @@ if ($f && $fp->canViewFile()) {
 		<a href="<?php echo ($forceDownload ? $f->getForceDownloadURL() : $f->getDownloadURL()); ?>"> <i class="fa fa-paperclip"></i> &nbsp; &nbsp; <?php echo stripslashes($controller->getLinkText()) ?></a>
 	</div>
 
-<?php } ?>
+<?php }

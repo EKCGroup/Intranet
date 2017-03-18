@@ -39,4 +39,3 @@ if ($u->inGroup(Group::getByName('Students'))) {
     header('Location: /dashboard/permissions');
     die();
 }
-?>
