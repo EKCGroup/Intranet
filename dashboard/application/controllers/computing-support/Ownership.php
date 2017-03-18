@@ -76,6 +76,7 @@ class Ownership extends My_Force_Login {
 
         if (in_array('CN=DG06,OU=Distribution Groups,OU=Email Groups,OU=Accounts,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
+            $data = array();
             $data['ownership'] = $this->ownership_model->get_all_ownership();
 
             $this->load->view('templates/header');
@@ -90,6 +91,7 @@ class Ownership extends My_Force_Login {
 
         if (in_array('CN=Dashboard_Admin,OU=Dashboard_Group,OU=Intranet_Group,OU=Groups,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
+            $data = array();
             $data['ownership'] = $this->ownership_model->get_pending_ownership();
 
             $this->load->view('templates/header');
@@ -102,6 +104,7 @@ class Ownership extends My_Force_Login {
 
     public function check() {
 
+        $data = array();
         $data['ownership'] = $this->ownership_model->check_ownership();
 
         $this->load->view('templates/header');

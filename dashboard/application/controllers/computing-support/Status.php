@@ -9,6 +9,7 @@ class Status extends My_Public {
 
     public function index() {
 
+        $data = array();
         $data['status'] = $this->status_model->view();
 
         $this->load->view('templates/header', $data);
@@ -18,6 +19,7 @@ class Status extends My_Public {
 
     public function display() {
 
+        $data = array();
         $data['status'] = $this->status_model->view();
 
         $this->load->view('templates/header', $data);
@@ -27,6 +29,7 @@ class Status extends My_Public {
 
     public function auto() {
 
+        $data = array();
         $data['status'] = $this->status_model->auto();
         $this->load->view('computing-support/status/auto', $data);
     }
@@ -80,6 +83,8 @@ class Status extends My_Public {
 
             if (isset($_GET['sid'])) {
                 $sid = $_GET['sid'];
+                
+                $data = array();
                 $data['get_current'] = $this->status_model->edit_get($sid);
             }
             $this->load->helper('form');

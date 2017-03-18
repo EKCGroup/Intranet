@@ -14,6 +14,7 @@ class Temporary_account extends My_Force_Login {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
+        $data = array();
         $data['faculty'] = $this->temporary_account_model->get_faculty();
         $data['department'] = $this->temporary_account_model->get_department();
         $data['tempid'] = "tempuser" . $this->temporary_account_model->get_next_temp();
@@ -59,6 +60,7 @@ class Temporary_account extends My_Force_Login {
                 $this->load->view('templates/footer');
             } else {
 
+                $data = array();
                 $data = new stdClass();
                 $data->error = 'There was a problem requesting this account. Please try again.';
 
@@ -74,6 +76,7 @@ class Temporary_account extends My_Force_Login {
 
         if (in_array('CN=DG06,OU=Distribution Groups,OU=Email Groups,OU=Accounts,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
+            $data = array();
             $data['temporary_account'] = $this->temporary_account_model->get_all();
 
             $this->load->view('templates/header');
@@ -86,6 +89,7 @@ class Temporary_account extends My_Force_Login {
     
     public function check() {
 
+        $data = array();
         $data['temporary_account'] = $this->temporary_account_model->check_status();
 
         $this->load->view('templates/header');
@@ -97,6 +101,7 @@ class Temporary_account extends My_Force_Login {
 
         if (in_array('CN=DG06,OU=Distribution Groups,OU=Email Groups,OU=Accounts,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
+            $data = array();
             $data['temporary_account'] = $this->temporary_account_model->get_pending();
 
             $this->load->view('templates/header');
@@ -162,6 +167,7 @@ class Temporary_account extends My_Force_Login {
                 $function = 'temp_account_APPROVED_' . $id;
                 $this->user_model->function_log($function);
         
+                    $data = array();
                     $data['AD'] = $this->temporary_account_model->get_account($id);
 
                     //AD account start

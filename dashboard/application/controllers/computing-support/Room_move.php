@@ -211,6 +211,7 @@ class Room_move extends My_Force_Login {
         if (in_array('CN=DG06,OU=Distribution Groups,OU=Email Groups,OU=Accounts,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups']) ||
                 in_array('CN=Dashboard_Estates_Room_Move,OU=Dashboard_Group,OU=Intranet_Group,OU=Groups,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
+            $data = array();
             $data['room_move'] = $this->room_move_model->get_all();
 
             $this->load->view('templates/header');
@@ -223,6 +224,7 @@ class Room_move extends My_Force_Login {
 
     public function check() {
 
+        $data = array();
         $data['room_move'] = $this->room_move_model->check_status();
 
         $this->load->view('templates/header');
@@ -235,6 +237,7 @@ class Room_move extends My_Force_Login {
         if (in_array('CN=Dashboard_CS_NS,OU=Dashboard_Group,OU=Intranet_Group,OU=Groups,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups']) ||
                 in_array('CN=Dashboard_Estates_Room_Move,OU=Dashboard_Group,OU=Intranet_Group,OU=Groups,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
+            $data = array();
             $data['room_move'] = $this->room_move_model->get_pending();
 
             $this->load->view('templates/header');

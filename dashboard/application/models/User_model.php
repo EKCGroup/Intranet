@@ -84,6 +84,7 @@ class User_model extends CI_Model {
                 foreach ($groups as $key => $value) {
                     $exp_key = explode(',', $value);
                     if ($exp_key[1] == $this->config->item('ldapdashboardgroupsou')) {
+                        $dashboard_groups = array();
                         $dashboard_groups[] = $value;
                     }
                 }

@@ -13,6 +13,7 @@ class Address_book extends My_Force_Login {
         $this->load->helper('form');
         $this->load->library('form_validation');
         
+        $data = array();
         $data['faculty'] = $this->address_book_model->get_faculty();
         $data['department'] = $this->address_book_model->get_department();
 

@@ -160,6 +160,7 @@ if ( ! function_exists('set_breadcrumb'))
         // Preparing the replacer, add exclude to replacer array
         foreach ($exclude as $value)
         {
+            $prep_exclude = array();
             $prep_exclude[$value] = ''; //if exclude then it's value is set to null
         }
 
@@ -301,8 +302,10 @@ if ( ! function_exists('set_breadcrumb'))
                         {
                             $new_segment_url = $segment.$val_url;
                         }
-
+                        
+                        $str_link = array();
                         $str_link[] = $new_segment_url;
+                        $str_name = array();
                         $str_name[] = ucwords($val_name);
                     }
                 }
@@ -349,8 +352,10 @@ if ( ! function_exists('set_breadcrumb'))
                             }
                         }
                     }
-
+                    
+                    $str_link = array();
                     $str_link[] = $segment;
+                    $str_name = array();
                     $str_name[] = ucwords($value);
                 }
             }

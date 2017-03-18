@@ -19,6 +19,7 @@ class New_account extends My_Force_Login {
             $this->load->helper('form');
             $this->load->library('form_validation');
 
+            $data = array();
             $data['faculty'] = $this->new_account_model->get_faculty();
             $data['department'] = $this->new_account_model->get_department();
 
