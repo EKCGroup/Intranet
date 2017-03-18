@@ -54,6 +54,7 @@
         
     <?php /* END Codeigniter */ } else {  /* IF Concrete5 */ ?>
     
+            <?php $is_concrete5 = TRUE; ?>
             <?php Loader::element('header_required'); ?>
             <link type="text/css" rel="stylesheet" href="<?= $view->getThemePath() ?>/assets/css/style.css">
 
