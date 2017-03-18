@@ -30,6 +30,9 @@ class User_model extends CI_Model {
                 return TRUE;
             }
             @ldap_close($ldap);
+            if (@ldap_close($ldap) === false) {
+                echo "Could not close LDAP connection";
+            }
         } else {
             return FALSE;
         }
@@ -110,6 +113,9 @@ class User_model extends CI_Model {
                 );
             }
             @ldap_close($ldap);
+            if (@ldap_close($ldap) === false) {
+                echo "Could not close LDAP connection";
+            }
         } else {
             return FALSE;
         }
