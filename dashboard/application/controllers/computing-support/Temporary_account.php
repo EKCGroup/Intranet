@@ -203,6 +203,7 @@ class Temporary_account extends My_Force_Login {
 
                     //Create Unicode password
                     $passwordWithQuotes = '"' . $data['AD'][0]['password'] . '"';
+                    $ldaprecord = array();
                     $ldaprecord["unicodepwd"] = iconv('UTF-8', 'UTF-16LE', $passwordWithQuotes);
 
                     //Build Active Directory record     
