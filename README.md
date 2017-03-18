@@ -29,6 +29,9 @@ git submodule update --init --recursive
 
 5.. Add the following to `dashboard/application/config/config.php`
 ```php
+#Random 32 length key
+$config['concrete5authkey'] = '';
+
 $config['ldapserver'] = 'ldap://'.$config['ldapip'];
 $config['ldapip'] = '';
 $config['ldapshortdomain'] = 'CANT-COL'.'\\';
