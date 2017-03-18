@@ -15,7 +15,7 @@ CC &amp; EKC Staff Intranet's is built using Concrete5 and Codeigniter, with a s
 
 2.. Download and configure the latest version of Codeigniter from `https://www.codeigniter.com/' in `WEBROOT/dashboard`
 
-3.. In `dashboard/application/config/config.php` set '$config['index_page'] = '';' and `$config['base_url'] = 'https://DOMAIN.COM/dashboard';`
+3.. In `dashboard/application/config/config.php` set `$config['index_page'] = '';` and `$config['base_url'] = 'https://DOMAIN.COM/dashboard';` and `$config['encryption_key'] = 'FOLLOWCIINSTRUCTIONS'`
 
 4.. Clone this repository into the webroot. **This may override some files**. 
 ```bash
@@ -37,16 +37,27 @@ $config['ldapuserou'] = 'OU=Accounts,DC=cant-col,DC=ac,DC=uk';
 $config['ldapbindun'] = 'ldapquery';
 $config['ldapbindpass'] = '';
 $config['ldapdashboardgroupsou'] = 'OU=Dashboard_Group';
-$config['ldapuserjobou1'] = 'OU=Staff,OU=Accounts,DC=cant-col,DC=ac,DC=uk';
-$config['ldapuserjobou2'] = '';
-$config['ldapuserjobou3'] = '';
-$config['ldapuserjobou4'] = '';
+
+//If you dont need all duplicate ou path otherwise error
+$config['ldapuserjobouone'] = 'OU=Staff,OU=Accounts,DC=cant-col,DC=ac,DC=uk';
+$config['ldapuserjoboutwo'] = 'OU=Student,OU=Accounts,DC=cant-col,DC=ac,DC=uk';
+$config['ldapuserjobouthree'] = 'OU=Admins,OU=Staff,OU=Accounts,DC=cant-col,DC=ac,DC=uk';
+$config['ldapuserjoboufour'] = 'OU=Staff,OU=Accounts,DC=cant-col,DC=ac,DC=uk';
+$config['ldapuserjoboufive'] = 'OU=Staff,OU=Accounts,DC=cant-col,DC=ac,DC=uk';
 
 $config['ldapadminun'] = 'administrator';
 $config['ldapadminpass'] = '';
 
-$config['privateip'] = '10.0.0.0|10.255.255.255';
 $config['timezone'] = 'Europe/London';
+
+$config['safeipone'] = '';
+$config['safeiptwo'] = '';
+$config['safeipthree'] = '';
+$config['safeipfour'] = '';
+$config['safeipfive'] = '';
+$config['safeipsix'] = '';
+$config['safeipseven'] = '';
+$config['safeipeight'] = '';
 ```
 6.. Import the dashboard config `dashboard/import.sql`
 
@@ -127,6 +138,8 @@ letsencrypt certonly --webroot -w /var/www/html/certificate.cant-col.ac.uk -d .c
 ### Auto Pull from master
 If you fork this repository, you can add the following to cron to pull all updates from master.
 ```bash
-*/1 * * * * su -s /bin/sh nobody -c 'cd /var/www/html/intranet && /usr/local/bin/git -q pull origin master'
-*/1 * * * * su -s /bin/sh nobody -c 'cd /var/www/html/intranet && /usr/local/bin/git -q submodule foreach git pull origin master'
+#Pull Git
+*/5 * * * * cd /var/www/html/intranet && git pull origin master >/dev/null 2>&1
+*/5 * * * * cd /var/www/html/intranet && git submodule foreach git pull origin master >/dev/null 2>&1
+*/5 * * * * chown -R apache:apache /var/www/html/intranet >/dev/null 2>&1
 ```
