@@ -22,15 +22,15 @@ class My_Public extends CI_Controller {
 
                 if ($user_ldap['useraccountcontrol'] == '66050') {
                     // disabled, password never expire
-                    redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/user-disabled');
+                    redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                 } elseif ($user_ldap['useraccountcontrol'] == '514') {
                     // disabled
-                    redirect('/dashboard/authentication/user-disabled');
+                    redirect('/authentication/user-disabled');
                 } else {
 
                     if (!in_array('CN=Staff,OU=Groups,DC=cant-col,DC=ac,DC=uk', $user_ldap['groups'])) {
 
-                        redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/user-disabled');
+                        redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                     } else {
 
                         $ip = $_SERVER['REMOTE_ADDR'];
@@ -86,15 +86,15 @@ class My_Force_Login extends CI_Controller {
 
                 if ($user_ldap['useraccountcontrol'] == '66050') {
                     // disabled, password never expire
-                    redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/user-disabled');
+                    redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                 } elseif ($user_ldap['useraccountcontrol'] == '514') {
                     // disabled
-                    redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/user-disabled');
+                    redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                 } else {
 
                     if (!in_array('CN=Staff,OU=Groups,DC=cant-col,DC=ac,DC=uk', $user_ldap['groups'])) {
 
-                        redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/user-disabled');
+                        redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                     } else {
 
                         $ip = $_SERVER['REMOTE_ADDR'];
@@ -165,7 +165,7 @@ class My_Force_Admin extends My_Force_Login {
 
         if (!in_array('CN=Dashboard_Admin,OU=Dashboard_Group,OU=Intranet_Group,OU=Groups,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
-            $this->load->view('http://'.$_SERVER['HTTP_HOST'].'/dashboard/templates/error/permissions');
+            $this->load->view('templates/error/permissions');
         }
     }
 
