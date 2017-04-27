@@ -67,7 +67,7 @@ class My_Force_Login extends CI_Controller {
         if (isset($_COOKIE['CI-CONCRETE5']) === FALSE) {
 
             $this->session->set_userdata('last_url', current_url());
-            redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/dashboard?url=' . current_url());
+            redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/dashboard?url=' . current_url());
         } else {
 
             $cookie = $_COOKIE['CI-CONCRETE5'];
@@ -79,7 +79,7 @@ class My_Force_Login extends CI_Controller {
                 //expire fake cookie
                 setcookie('CI-CONCRETE5', 'expired', time() - (1), "/");
                 $this->session->set_userdata('last_url', current_url());
-                redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/dashboard?url=' . current_url());
+                redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/dashboard?url=' . current_url());
             } else {
 
                 $user_ldap = $this->user_model->user_ldap($username);
