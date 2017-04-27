@@ -25,7 +25,7 @@ class My_Public extends CI_Controller {
                     redirect('http://'.$_SERVER['HTTP_HOST'].'/dashboard/authentication/user-disabled');
                 } elseif ($user_ldap['useraccountcontrol'] == '514') {
                     // disabled
-                    redirect('/authentication/user-disabled');
+                    redirect('/dashboard/authentication/user-disabled');
                 } else {
 
                     if (!in_array('CN=Staff,OU=Groups,DC=cant-col,DC=ac,DC=uk', $user_ldap['groups'])) {
