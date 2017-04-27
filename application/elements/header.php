@@ -37,10 +37,12 @@
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 
-    <!-- Jquery Order Matters -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    
     
     <?php if (isset($is_codeigniter)) { ?>
+    
+        <!-- Jquery Order Matters -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     
         <meta name="msapplication-TileColor" content="rgb(18, 70, 128)">
         <meta name="msapplication-TileImage" content="https://intranet.cant-col.ac.uk/application/files/3414/5649/6499/Canterbury_College.png">
@@ -53,6 +55,11 @@
         <link type="text/css" rel="stylesheet" href="/application/themes/ccintranet/assets/css/style.css">
         
     <?php /* END Codeigniter */ } else {  /* IF Concrete5 */ ?>
+            
+            <!-- Jquery Order Matters -->
+            <!-- Must be loaded before jquery -->
+            <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     
             <?php $is_concrete5 = TRUE; ?>
             <?php Loader::element('header_required'); ?>
