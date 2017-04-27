@@ -22,7 +22,7 @@ class My_Public extends CI_Controller {
 
                 if ($user_ldap['useraccountcontrol'] == '66050') {
                     // disabled, password never expire
-                    redirect('/authentication/user-disabled');
+                    redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                 } elseif ($user_ldap['useraccountcontrol'] == '514') {
                     // disabled
                     redirect('/authentication/user-disabled');
@@ -30,7 +30,7 @@ class My_Public extends CI_Controller {
 
                     if (!in_array('CN=Staff,OU=Groups,DC=cant-col,DC=ac,DC=uk', $user_ldap['groups'])) {
 
-                        redirect('/authentication/user-disabled');
+                        redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                     } else {
 
                         $ip = $_SERVER['REMOTE_ADDR'];
@@ -67,7 +67,7 @@ class My_Force_Login extends CI_Controller {
         if (isset($_COOKIE['CI-CONCRETE5']) === FALSE) {
 
             $this->session->set_userdata('last_url', current_url());
-            redirect('/authentication/dashboard?url=' . current_url());
+            redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/dashboard?url=' . current_url());
         } else {
 
             $cookie = $_COOKIE['CI-CONCRETE5'];
@@ -79,22 +79,22 @@ class My_Force_Login extends CI_Controller {
                 //expire fake cookie
                 setcookie('CI-CONCRETE5', 'expired', time() - (1), "/");
                 $this->session->set_userdata('last_url', current_url());
-                redirect('/authentication/dashboard?url=' . current_url());
+                redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/dashboard?url=' . current_url());
             } else {
 
                 $user_ldap = $this->user_model->user_ldap($username);
 
                 if ($user_ldap['useraccountcontrol'] == '66050') {
                     // disabled, password never expire
-                    redirect('/authentication/user-disabled');
+                    redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                 } elseif ($user_ldap['useraccountcontrol'] == '514') {
                     // disabled
-                    redirect('/authentication/user-disabled');
+                    redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                 } else {
 
                     if (!in_array('CN=Staff,OU=Groups,DC=cant-col,DC=ac,DC=uk', $user_ldap['groups'])) {
 
-                        redirect('/authentication/user-disabled');
+                        redirect('http://'.$_SERVER['HTTP_HOST'].'/authentication/user-disabled');
                     } else {
 
                         $ip = $_SERVER['REMOTE_ADDR'];
@@ -104,7 +104,7 @@ class My_Force_Login extends CI_Controller {
                             if (isset($_SESSION['external_login']) === FALSE) {
 
                                 $this->session->set_userdata('last_url', current_url());
-                                redirect('authentication/external-login');
+                                redirect('http://'.$_SERVER['HTTP_HOST'].'authentication/external-login');
                             } else {
 
                                 $uid = $this->user_model->get_uid_from_username($username);
@@ -165,7 +165,7 @@ class My_Force_Admin extends My_Force_Login {
 
         if (!in_array('CN=Dashboard_Admin,OU=Dashboard_Group,OU=Intranet_Group,OU=Groups,DC=cant-col,DC=ac,DC=uk', $_SESSION['ldap']['groups'])) {
 
-            $this->load->view('templates/error/permissions');
+            $this->load->view('http://'.$_SERVER['HTTP_HOST'].'templates/error/permissions');
         }
     }
 

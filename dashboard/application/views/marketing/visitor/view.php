@@ -99,9 +99,10 @@
                         <label id="checkbox"><input type="radio" name="subject[]" value="Beauty & Theatrical Makeup"> Beauty & Theatrical Makeup</label> <br>
                         <label id="checkbox"><input type="radio" name="subject[]" value="Building Services"> Building Services (Plumming & Electrical)</label> <br>
                         <label id="checkbox"><input type="radio" name="subject[]" value="Business"> Business</label> <br>
-                        <label id="checkbox"><input type="radio" name="subject[]" value="Catering & Hospitality"> Catering & Hospitality</label> <br>
+                        <label id="checkbox"><input type="radio" name="subject[]" value="Computing & ICT "> Computing & ICT </label> <br>
                     </div>
                     <div class="col-md-2">
+                        <label id="checkbox"><input type="radio" name="subject[]" value="Catering & Hospitality"> Catering & Hospitality</label> <br>
                         <label id="checkbox"><input type="radio" name="subject[]" value="Childhood Education"> Childhood Education</label>
                         <label id="checkbox"><input type="radio" name="subject[]" value="Construction Crafts (Bricklaying & Woodwork)"> Construction Crafts (Bricklaying & Woodwork)</label> <br>
                         <label id="checkbox"><input type="radio" name="subject[]" value="Drama & Dance"> Drama & Dance</label> <br>
