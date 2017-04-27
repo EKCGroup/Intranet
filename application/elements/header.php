@@ -57,8 +57,6 @@
     <?php /* END Codeigniter */ } else {  /* IF Concrete5 */ ?>
             
             <!-- Jquery Order Matters -->
-            <!-- Must be loaded before jquery -->
-            <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     
             <?php $is_concrete5 = TRUE; ?>
