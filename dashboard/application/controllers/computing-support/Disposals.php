@@ -42,7 +42,7 @@ class Disposals extends My_Force_Login {
 
                     // user created
                     $this->load->view('templates/header');
-                    $this->load->view('computing-support/new-account/created');
+                    $this->load->view('computing-support/disposals/created');
                     $this->load->view('templates/footer');
 
                 } else {
